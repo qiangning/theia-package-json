@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "dependencies": {
+    "@theia/callhierarchy": "0.15.0",
+    "@theia/file-search": "0.15.0",
+    "@theia/git": "0.15.0",
+    "@theia/json": "0.15.0",
+    "@theia/markers": "0.15.0",
+    "@theia/messages": "0.15.0",
+    "@theia/mini-browser": "0.15.0",
+    "@theia/navigator": "0.15.0",
+    "@theia/outline-view": "0.15.0",
+    "@theia/plugin-ext-vscode": "0.15.0",
+    "@theia/preferences": "0.15.0",
+    "@theia/preview": "0.15.0",
+    "@theia/search-in-workspace": "0.15.0",
+    "@theia/terminal": "0.15.0",
+    "@theia/python": "0.15.0",
+    "@theia/textmate-grammars": "0.15.0"
+ },
+  "devDependencies": {
+    "@theia/cli": "0.15.0"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn build && yarn run download:plugins",
+    "clean": "theia clean",
+    "build": "theia build --mode development",
+    "start": "theia start --plugins=local-dir:plugins",
+    "download:plugins": "theia download:plugins"
+  },
+  "theiaPluginsDir": "plugins",
+  "theiaPlugins": {
+    "vscode-builtin-css": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/css-1.39.1-prel.vsix",
+    "vscode-builtin-html": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/html-1.39.1-prel.vsix",
+    "vscode-builtin-javascript": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/javascript-1.39.1-prel.vsix",
+    "vscode-builtin-json": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/json-1.39.1-prel.vsix",
+    "vscode-builtin-markdown": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/markdown-1.39.1-prel.vsix",
+    "vscode-builtin-npm": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/npm-1.39.1-prel.vsix",
+    "vscode-builtin-scss": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/scss-1.39.1-prel.vsix",
+    "vscode-builtin-typescript": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/typescript-1.39.1-prel.vsix",
+    "vscode-builtin-typescript-language-features": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/typescript-language-features-1.39.1-prel.vsix"
+  }
+}
